@@ -465,6 +465,8 @@ GameObject:
   - component: {fileID: 247676868}
   - component: {fileID: 247676871}
   - component: {fileID: 247676872}
+  - component: {fileID: 247676874}
+  - component: {fileID: 247676873}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -548,9 +550,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ca3ad9a41249747958c2d529906aa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
-  _speedJump: 7
-  _rotationSpeed: 5
 --- !u!114 &247676872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,6 +562,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2156b95d80b6a704bbfb2aba63bf54de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &247676873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247676867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507d0e9548e4987479f8f55d49dff1f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speedJump: 10
+--- !u!114 &247676874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247676867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 600c4773a99425f4f8a30b667e44d86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 10
+  _rotationSpeed: 10
 --- !u!1 &409807647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,7 +1402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8c95f905e294948b0b74e1e66aaf53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ball: {fileID: 0}
+  _ball: {fileID: 247676871}
   _coinCollector: {fileID: 247676872}
   _timer: 15
   _coinsToWin: 5
