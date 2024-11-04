@@ -14,6 +14,6 @@ public class SpawnCoin : MonoBehaviour
 
     public void Initialize()
     {
-        Instantiate(_coinPrefab, _spawnPoint.position, Quaternion.Euler(0,0,90), null);
+        Instantiate(_coinPrefab, _spawnPoint.position, Quaternion.Euler(0,0,0), null);
     }
 }
