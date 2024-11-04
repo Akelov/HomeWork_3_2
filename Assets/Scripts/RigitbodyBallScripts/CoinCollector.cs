@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class CoinCollector : MonoBehaviour
 {
     public int Coins { get; private set; }
 
-    public void AddCoin(int value)
+    private void AddCoin(int value)
     {
         if (value < 0)
         {
@@ -16,6 +17,15 @@ public class CoinCollector : MonoBehaviour
 
         Coins += value;
         Debug.Log("Coins: " + Coins);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Coin coin = other.GetComponent<Coin>();
+        if (coin != null)
+        {
+            AddCoin(coin.Value);
+        }
     }
 
     public void Restart()

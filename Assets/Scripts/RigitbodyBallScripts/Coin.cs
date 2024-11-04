@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    [SerializeField] private int _value = 1;
     [SerializeField] private float rotateSpeed;
+
+    public int Value { get; private set; } = 1;
 
     private void Update()
     {
@@ -17,11 +18,9 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        CoinCollector _coinCollector = other.GetComponent<CoinCollector>();
-
-        if (_coinCollector != null)
+        Ball ball = other.GetComponent<Ball>();
+        if(ball != null)
         {
-            _coinCollector.AddCoin(_value);
             DestroyCoin();
         }
     }
